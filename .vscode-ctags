@@ -1,0 +1,101 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/kongchen/linux/RK3568/Linux_Drivers/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	//
+ARCH	1_helloworld/Makefile	/^export ARCH=arm64$/;"	m
+ARCH	2_module_param/Makefile	/^export ARCH=arm64$/;"	m
+ARCH	3_export_test/Makefile	/^export ARCH=arm64$/;"	m
+ARCH	4_device_register/Makefile	/^export ARCH=arm64$/;"	m
+ARCH	5_cdev_test/Makefile	/^export ARCH=arm64$/;"	m
+ARCH	6_cdev_nod/Makefile	/^export ARCH=arm64$/;"	m
+ARCH	7_file_operations/Makefile	/^export ARCH=arm64$/;"	m
+CROSS_COMPILE	1_helloworld/Makefile	/^export CROSS_COMPILE=\/home\/kongchen\/linux\/RK3568\/rk356x-linux\/prebuilts\/gcc\/linux-x86\/a/;"	m
+CROSS_COMPILE	2_module_param/Makefile	/^export CROSS_COMPILE=\/home\/kongchen\/linux\/RK3568\/rk356x-linux\/prebuilts\/gcc\/linux-x86\/a/;"	m
+CROSS_COMPILE	3_export_test/Makefile	/^export CROSS_COMPILE=\/home\/kongchen\/linux\/RK3568\/rk356x-linux\/prebuilts\/gcc\/linux-x86\/a/;"	m
+CROSS_COMPILE	4_device_register/Makefile	/^export CROSS_COMPILE=\/home\/kongchen\/linux\/RK3568\/rk356x-linux\/prebuilts\/gcc\/linux-x86\/a/;"	m
+CROSS_COMPILE	5_cdev_test/Makefile	/^export CROSS_COMPILE=\/home\/kongchen\/linux\/RK3568\/rk356x-linux\/prebuilts\/gcc\/linux-x86\/a/;"	m
+CROSS_COMPILE	6_cdev_nod/Makefile	/^export CROSS_COMPILE=\/home\/kongchen\/linux\/RK3568\/rk356x-linux\/prebuilts\/gcc\/linux-x86\/a/;"	m
+CROSS_COMPILE	7_file_operations/Makefile	/^export CROSS_COMPILE=\/home\/kongchen\/linux\/RK3568\/rk356x-linux\/prebuilts\/gcc\/linux-x86\/a/;"	m
+INCLUDE_VERMAGIC	1_helloworld/hello.mod.c	/^#define INCLUDE_VERMAGIC$/;"	d	file:
+INCLUDE_VERMAGIC	2_module_param/module_param.mod.c	/^#define INCLUDE_VERMAGIC$/;"	d	file:
+INCLUDE_VERMAGIC	3_export_test/module1.mod.c	/^#define INCLUDE_VERMAGIC$/;"	d	file:
+INCLUDE_VERMAGIC	3_export_test/module2.mod.c	/^#define INCLUDE_VERMAGIC$/;"	d	file:
+INCLUDE_VERMAGIC	5_cdev_test/cdev_test.mod.c	/^#define INCLUDE_VERMAGIC$/;"	d	file:
+INCLUDE_VERMAGIC	6_cdev_nod/cdev_nod.mod.c	/^#define INCLUDE_VERMAGIC$/;"	d	file:
+INCLUDE_VERMAGIC	7_file_operations/file_operations.mod.c	/^#define INCLUDE_VERMAGIC$/;"	d	file:
+KDIR	1_helloworld/Makefile	/^KDIR := \/home\/kongchen\/linux\/RK3568\/rk356x-linux\/kernel$/;"	m
+KDIR	2_module_param/Makefile	/^KDIR := \/home\/kongchen\/linux\/RK3568\/rk356x-linux\/kernel$/;"	m
+KDIR	3_export_test/Makefile	/^KDIR := \/home\/kongchen\/linux\/RK3568\/rk356x-linux\/kernel$/;"	m
+KDIR	4_device_register/Makefile	/^KDIR := \/home\/kongchen\/linux\/RK3568\/rk356x-linux\/kernel$/;"	m
+KDIR	5_cdev_test/Makefile	/^KDIR := \/home\/kongchen\/linux\/RK3568\/rk356x-linux\/kernel$/;"	m
+KDIR	6_cdev_nod/Makefile	/^KDIR := \/home\/kongchen\/linux\/RK3568\/rk356x-linux\/kernel$/;"	m
+KDIR	7_file_operations/Makefile	/^KDIR := \/home\/kongchen\/linux\/RK3568\/rk356x-linux\/kernel$/;"	m
+PWD	1_helloworld/Makefile	/^PWD ?= $(shell pwd)$/;"	m
+PWD	2_module_param/Makefile	/^PWD ?= $(shell pwd)$/;"	m
+PWD	3_export_test/Makefile	/^PWD ?= $(shell pwd)$/;"	m
+PWD	4_device_register/Makefile	/^PWD ?= $(shell pwd)$/;"	m
+PWD	5_cdev_test/Makefile	/^PWD ?= $(shell pwd)$/;"	m
+PWD	6_cdev_nod/Makefile	/^PWD ?= $(shell pwd)$/;"	m
+PWD	7_file_operations/Makefile	/^PWD ?= $(shell pwd)$/;"	m
+add	3_export_test/module1.c	/^int add(int a, int b)$/;"	f	typeref:typename:int
+all	1_helloworld/Makefile	/^all:$/;"	t
+all	2_module_param/Makefile	/^all:$/;"	t
+all	3_export_test/Makefile	/^all:$/;"	t
+all	4_device_register/Makefile	/^all:$/;"	t
+all	5_cdev_test/Makefile	/^all:$/;"	t
+all	6_cdev_nod/Makefile	/^all:$/;"	t
+all	7_file_operations/Makefile	/^all:$/;"	t
+cdev_fops_test	6_cdev_nod/cdev_nod.c	/^static struct file_operations cdev_fops_test = {$/;"	v	typeref:struct:file_operations	file:
+cdev_fops_test	7_file_operations/file_operations.c	/^static struct file_operations cdev_fops_test = {$/;"	v	typeref:struct:file_operations	file:
+cdev_test	5_cdev_test/cdev_test.c	/^static struct cdev cdev_test;$/;"	v	typeref:struct:cdev	file:
+cdev_test	6_cdev_nod/cdev_nod.c	/^static struct cdev cdev_test;$/;"	v	typeref:struct:cdev	file:
+cdev_test	7_file_operations/file_operations.c	/^static struct cdev cdev_test;$/;"	v	typeref:struct:cdev	file:
+cdev_test_ops	5_cdev_test/cdev_test.c	/^static struct file_operations cdev_test_ops = {$/;"	v	typeref:struct:file_operations	file:
+chrdev_fops_exit	6_cdev_nod/cdev_nod.c	/^static void __exit chrdev_fops_exit(void)$/;"	f	typeref:typename:void __exit	file:
+chrdev_fops_exit	7_file_operations/file_operations.c	/^static void __exit chrdev_fops_exit(void)$/;"	f	typeref:typename:void __exit	file:
+chrdev_fops_init	6_cdev_nod/cdev_nod.c	/^static int __init chrdev_fops_init(void)$/;"	f	typeref:typename:int __init	file:
+chrdev_fops_init	7_file_operations/file_operations.c	/^static int __init chrdev_fops_init(void)$/;"	f	typeref:typename:int __init	file:
+chrdev_open	7_file_operations/file_operations.c	/^static int chrdev_open(struct inode *inode, struct file *file)$/;"	f	typeref:typename:int	file:
+chrdev_read	7_file_operations/file_operations.c	/^static ssize_t chrdev_read(struct file *file, char __user *buf, $/;"	f	typeref:typename:ssize_t	file:
+chrdev_release	7_file_operations/file_operations.c	/^static int chrdev_release(struct inode *inode, struct file *file)$/;"	f	typeref:typename:int	file:
+chrdev_write	7_file_operations/file_operations.c	/^static ssize_t chrdev_write(struct file *file, const char __user *buf, $/;"	f	typeref:typename:ssize_t	file:
+class_test	6_cdev_nod/cdev_nod.c	/^static struct class *class_test;$/;"	v	typeref:struct:class *	file:
+class_test	7_file_operations/file_operations.c	/^static struct class *class_test;$/;"	v	typeref:struct:class *	file:
+clean	1_helloworld/Makefile	/^clean:$/;"	t
+clean	2_module_param/Makefile	/^clean:$/;"	t
+clean	3_export_test/Makefile	/^clean:$/;"	t
+clean	4_device_register/Makefile	/^clean:$/;"	t
+clean	5_cdev_test/Makefile	/^clean:$/;"	t
+clean	6_cdev_nod/Makefile	/^clean:$/;"	t
+clean	7_file_operations/Makefile	/^clean:$/;"	t
+dev_num	4_device_register/device_register.c	/^static dev_t dev_num;$/;"	v	typeref:typename:dev_t	file:
+dev_num	5_cdev_test/cdev_test.c	/^static dev_t dev_num;$/;"	v	typeref:typename:dev_t	file:
+dev_num	6_cdev_nod/cdev_nod.c	/^static dev_t dev_num;$/;"	v	typeref:typename:dev_t	file:
+dev_num	7_file_operations/file_operations.c	/^static dev_t dev_num;$/;"	v	typeref:typename:dev_t	file:
+dev_t_exit	4_device_register/device_register.c	/^static void __exit dev_t_exit(void)$/;"	f	typeref:typename:void __exit	file:
+dev_t_init	4_device_register/device_register.c	/^static int __init dev_t_init(void)$/;"	f	typeref:typename:int __init	file:
+hello_exit	3_export_test/module2.c	/^static void __exit hello_exit(void)$/;"	f	typeref:typename:void __exit	file:
+hello_init	3_export_test/module2.c	/^static int __init hello_init(void)$/;"	f	typeref:typename:int __init	file:
+helloworld_exit	1_helloworld/hello.c	/^static void __exit helloworld_exit(void)$/;"	f	typeref:typename:void __exit	file:
+helloworld_init	1_helloworld/hello.c	/^static int __init helloworld_init(void)$/;"	f	typeref:typename:int __init	file:
+major	4_device_register/device_register.c	/^static int major;$/;"	v	typeref:typename:int	file:
+math_exit	3_export_test/module1.c	/^static void __exit math_exit(void)$/;"	f	typeref:typename:void __exit	file:
+math_init	3_export_test/module1.c	/^static int __init math_init(void)$/;"	f	typeref:typename:int __init	file:
+minor	4_device_register/device_register.c	/^static int minor;$/;"	v	typeref:typename:int	file:
+module_cdev_exit	5_cdev_test/cdev_test.c	/^static void __exit module_cdev_exit(void)$/;"	f	typeref:typename:void __exit	file:
+module_cdev_init	5_cdev_test/cdev_test.c	/^static int __init module_cdev_init(void)$/;"	f	typeref:typename:int __init	file:
+n_para	2_module_param/module_param.c	/^static int n_para;      \/\/ number of array elements$/;"	v	typeref:typename:int	file:
+name	2_module_param/module_param.c	/^static char *name;      \/\/ char variable$/;"	v	typeref:typename:char *	file:
+num	3_export_test/module1.c	/^int num = 10;           \/\/ Define the global variable num$/;"	v	typeref:typename:int
+number	2_module_param/module_param.c	/^static int number;      \/\/ int variable$/;"	v	typeref:typename:int	file:
+para	2_module_param/module_param.c	/^static int para[8];     \/\/ array$/;"	v	typeref:typename:int[8]	file:
+parameter_exit	2_module_param/module_param.c	/^static void __exit parameter_exit(void)$/;"	f	typeref:typename:void __exit	file:
+parameter_init	2_module_param/module_param.c	/^static int __init parameter_init(void)$/;"	f	typeref:typename:int __init	file:
+str1	2_module_param/module_param.c	/^static char str1[10];   \/\/ character string$/;"	v	typeref:typename:char[10]	file:
