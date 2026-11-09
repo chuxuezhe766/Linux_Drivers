@@ -1,0 +1,144 @@
+#include <stdio.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <sys/ioctl.h>
+#include <string.h>
+#include <pthread.h>
+
+#define DEVICE "/dev/rwlock_test"
+
+// the macro
+#define RWLOCK_IOC_READ     _IOR('R', 0, char[256])
+#define RWLOCK_IOC_WRITE    _IOW('R', 1, char[256]);
+#define RWLOCK_IOC_VERSION  _IOR('R', 2, int);
+
+// read thread
+void *reader_thread(void *arg)
+{
+    int id = *(int *)arg;
+    int fd;
+    char buf[256];
+    int i;
+
+    fd = open(DEVICE, O_RDWR);
+    if (fd < 0) {
+        perror("打开设备失败");
+        return NULL;
+    }
+
+    for (i = 0; i < 5; i ++) {
+        int n = read(fd, buf, sizeof(buf) - 1);
+        if (n > 0) {
+            buf[n] = '\0';
+            printf("[读者%d] 第%d次读取: %s\n", id, i + 1, buf);
+        }
+        usleep(200000);
+    }
+
+    close(fd);
+    printf("[读者%d] 退出\n", id);
+    return NULL;
+}
+
+// write thread
+void *writer_thread(void *arg)
+{
+    int id = *(int *)arg;
+    int fd;
+    char buf[256];
+    int i;
+
+    fd = open(DEVICE, O_RDWR);
+    if (fd < 0) {
+        perror("打开设备失败");
+        return NULL;
+    } 
+
+    for (i = 0; i < 3; i ++) {
+        snprintf(buf, sizeof(buf));
+        write(fd, buf, strlen(buf));
+        printf("[写者%d] 第%d次写入: %s\n", id, i + 1, buf);
+
+        usleep(500000);
+    }
+
+    close(fd);
+    printf("[写者%d] 退出\n", id);
+    return NULL;
+}
+
+int main(void)
+{
+    pthread_t readers[3];   // 三个读者线程
+    pthread_t writer[2];    // 两个写者线程
+    int reader_ids[3] = {1, 2, 3};
+    int writer_ids[2] = {1, 2};
+    int i;
+
+
+    printf("--------读写锁测试-----------\n");
+    printf("启动线程\r\n");
+
+    // Obtain the device number
+    if (ioctl(fd, IOCTL_GET_VER, &version) < 0) {
+        perror("ioctl GET_VER");
+        close(fd);
+        return -1;
+    }
+    printf("1. Get version: %d (v%d.%02d)\n", version, version/100, version%100);
+
+    // Set mode 
+    mode = 2;
+    if (ioctl(fd, IOCTL_SET_MODE, &mode) < 0) {
+        perror("ioctl SET_MODE");
+        close(fd);
+        return -1;
+    }
+    printf("2. Set mode to: %d\n", mode);
+
+    // Get status
+    if (ioctl(fd, IOCTL_GET_STATUS, &status) < 0) {
+        perror("ioctl GET_STATUS");
+        close(fd);
+        return -1;
+    }
+    printf("3. Get status: %d\n", status);
+
+    // Set data
+    strncpy(data.name, "Test Data", sizeof(data.name));
+    data.value = 42;
+    if (ioctl(fd, IOCTL_SET_DATA, &data) < 0) {
+        perror("ioctl SET_DATA");
+        close(fd);
+        return -1;
+    }
+    printf("Set data: name=%s, value=%d\n", data.name, data.value);
+
+    // Obtain data
+    memset(&data, 0, sizeof(data));
+    if (ioctl(fd, IOCTL_GET_DATA, &data) < 0) {
+        perror("ioctl GET_DATA");
+        close(fd);
+        return -1;
+    }
+    printf("Get data: name=%s, value=%d\n", data.name, data.value);
+
+    // Reset device 
+    if (ioctl(fd, IOCTL_RESET) < 0) {
+        perror("ioctl RESET");
+        close(fd);
+        return -1;
+    }
+    printf("Device reset\n");
+
+    // Check Reset
+    if (ioctl(fd, IOCTL_GET_STATUS, &status) < 0) {
+        perror("ioctl GET_STATUS");
+        close(fd);
+        return -1;
+    }
+    printf("Status after reset: %d\n", status);
+    close(fd);
+    printf("All ioctl tests passed\n");
+    return 0;
+}
